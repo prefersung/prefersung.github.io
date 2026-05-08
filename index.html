@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengfei Song | 宋鹏飞</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --text: #333;
+            --light: #f8f9fa;
+            --border: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Section */
+        .header {
+            padding: 60px 0 30px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .profile {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--border);
+            flex-shrink: 0;
+        }
+
+        .profile-info h1 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .profile-info .location {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .profile-info p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        .links {
+            margin-top: 10px;
+        }
+
+        .links a {
+            color: var(--accent);
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .links a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        /* Sections */
+        section {
+            padding: 35px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-weight: 600;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin: 18px 0 8px;
+            font-weight: 600;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "•";
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Experience */
+        .exp-item {
+            margin-bottom: 18px;
+        }
+
+        .exp-item strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .exp-item .time {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Publications */
+        .pub-item {
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 3px solid var(--accent);
+        }
+
+        .pub-item .title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .pub-item .authors {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .pub-item .authors em {
+            font-style: normal;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .pub-item .venue {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .pub-item .badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-left: 8px;
+            font-style: normal;
+        }
+
+        /* News */
+        .news-item {
+            padding: 8px 0;
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-item .date {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-right: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 0 30px;
+            color: #999;
+            font-size: 0.85rem;
+        }
+
+        .footer img {
+            max-width: 200px;
+            margin-top: 15px;
+            opacity: 0.8;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            .header {
+                padding: 30px 0 20px;
+            }
+
+            .profile {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .profile-info p {
+                text-align: left;
+            }
+
+            .avatar {
+                width: 120px;
+                height: 120px;
+            }
+
+            .profile-info h1 {
+                font-size: 1.6rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            section {
+                padding: 25px 0;
+            }
+
+            .pub-item {
+                padding-left: 8px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .profile-info h1 {
+                font-size: 1.4rem;
+            }
+
+            .links a {
+                display: inline-block;
+                margin: 5px 10px 5px 0;
+            }
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <div class="container">
+        <!-- Header / Profile -->
+        <header class="header">
+            <div class="profile">
+                <img src="https://avatars.githubusercontent.com/u/placeholder" alt="Pengfei Song" class="avatar" id="avatar">
+                <div class="profile-info">
+                    <h1>Pengfei Song <span style="font-weight:400;font-size:1.2rem;color:#666;">宋鹏飞</span></h1>
+                    <div class="location">📍 Suzhou, China | Southeast University</div>
+                    <p>
+                        I am a Master's student at <strong>Southeast University</strong>, focusing on <strong>Recommender Systems</strong> 
+                        and <strong>Generative AI</strong>. My research interests include cross-domain recommendation, cold-start problem modeling, 
+                        and generative recommendation systems (e.g., VAE/RQVAE-based approaches).
+                    </p>
+                    <p>
+                        Currently, I am a research intern at <strong>Microsoft Suzhou</strong> (via FESCO Adecco), working on large-scale 
+                        recommendation systems and exploring the intersection of LLMs and recommendation.
+                    </p>
+                    <div class="links">
+                        <a href="mailto:prefersung@gmail.com">📧 Email</a>
+                        <a href="https://github.com/prefersung" target="_blank">💻 GitHub</a>
+                        <a href="https://scholar.google.com/citations?user=placeholder" target="_blank">🎓 Google Scholar</a>
+                        <a href="https://www.linkedin.com/in/pengfei-song-placeholder" target="_blank">🔗 LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Research Interests -->
+        <section id="research">
+            <h2>Research Interests</h2>
+            <p>My research focuses on improving recommender systems through generative modeling and cross-domain transfer:</p>
+            <ul>
+                <li><strong>Cross-Domain Recommendation</strong> — Transferring knowledge across domains to alleviate data sparsity</li>
+                <li><strong>Cold-Start Problem</strong> — Addressing the challenge of recommending for new users/items with limited interactions</li>
+                <li><strong>Generative Recommendation</strong> — Leveraging VAE, RQVAE, and seq2seq models for next-item prediction</li>
+                <li><strong>Knowledge Distillation</strong> — Cross-domain knowledge distillation for domain adaptation in recommendation</li>
+                <li><strong>Efficient LLM Deployment</strong> — Practical deployment of large models in real-world recommendation scenarios</li>
+            </ul>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience">
+            <h2>Experience</h2>
+
+            <div class="exp-item">
+                <strong>Microsoft Suzhou</strong> — Research Intern <span class="time">| 2025 – Present</span><br>
+                Working on large-scale recommendation systems and LLM-related projects. Mentored by Qingsong and collaborating with the ICM data team.
+            </div>
+
+            <div class="exp-item">
+                <strong>Southeast University</strong> — Master's Student <span class="time">| 2023 – Present</span><br>
+                School of Computer Science and Engineering. Research on cross-domain recommendation and generative models. Served as class monitor and deputy secretary of the Youth League branch.
+            </div>
+
+            <div class="exp-item">
+                <strong>Tongren Hospital Nanjing</strong> — Volunteer <span class="time">| Previous</span><br>
+                Participated in hospital guidance volunteer service.
+            </div>
+        </section>
+
+        <!-- News -->
+        <section id="news">
+            <h2>News</h2>
+            <div class="news-item">
+                <span class="date">[May 2025]</span> Joined Microsoft Suzhou as a research intern, working on recommendation systems.
+            </div>
+            <div class="news-item">
+                <span class="date">[Apr 2025]</span> Completed onboarding and obtained GitHub EMU account and Claude Code access.
+            </div>
+            <div class="news-item">
+                <span class="date">[Mar 2025]</span> Started investigating AMLCDR (WSDM 2025) and RPG (KDD 2025) for cross-domain recommendation research.
+            </div>
+            <div class="news-item">
+                <span class="date">[Feb 2025]</span> Working on SID generation project involving RQVAE for video generation and codebook initialization analysis.
+            </div>
+        </section>
+
+        <!-- Publications -->
+        <section id="publications">
+            <h2>Selected Publications</h2>
+
+            <div class="pub-item">
+                <div class="title">AMLCDR: Adaptive Meta-Learning for Cross-Domain Recommendation <span class="badge">WSDM 2025</span></div>
+                <div class="authors"><em>Pengfei Song</em>, et al.</div>
+                <div class="venue">In Proceedings of the 18th ACM International WSDM Conference, 2025</div>
+            </div>
+
+            <div class="pub-item">
+                <div class="title">RPG: Reinforced Prompt Generation for Cold-Start Recommendation <span class="badge">KDD 2025</span></div>
+                <div class="authors">Authors, <em>Pengfei Song</em>, et al.</div>
+                <div class="venue">In Proceedings of the 31st ACM SIGKDD Conference, 2025</div>
+            </div>
+
+            <div class="pub-item">
+                <div class="title">Cross-Domain Sequential Recommendation via Disentangled Representation Learning</div>
+                <div class="authors"><em>Pengfei Song</em>, et al.</div>
+                <div class="venue">Under Review</div>
+            </div>
+
+            <p style="margin-top:15px;color:#666;font-size:0.9rem;">
+                * Publication list is illustrative — please replace with your actual papers.
+            </p>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>SID Generation</strong> — RQVAE-based video generation with codebook initialization analysis and PyTorch distributed training (DDP)</li>
+                <li><strong>AL-GR Dataset Experiments</strong> — Fine-tuning T5-base for recommendation tasks with Hugging Face Accelerate</li>
+                <li><strong>Cross-Domain Recommendation Toolkit</strong> — PyTorch implementation of meta-learning and knowledge distillation baselines</li>
+                <li><strong>RISCV-Agent / SCV-Agent</strong> — RTL verification and coverage analysis (line, branch, condition, toggle)</li>
+            </ul>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Deep Learning:</strong> PyTorch, Transformers, Hugging Face, Accelerate, Distributed Training (DDP)</li>
+                <li><strong>Programming:</strong> Python, C/C++, LaTeX, Shell scripting</li>
+                <li><strong>Systems:</strong> Linux server administration, SSH, iptables/ufw, conda environment management</li>
+                <li><strong>Data:</strong> pandas, CSV/JSONL processing, Hugging Face Datasets</li>
+                <li><strong>Tools:</strong> Git, nohup, YAML/JSON configuration management, Claude Code</li>
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2025 Pengfei Song. All rights reserved.</p>
+            <p>Last updated: May 2025</p>
+            <p style="margin-top:10px;font-size:0.8rem;">
+                Powered by GitHub Pages | Theme inspired by <a href="https://jialefu.github.io/" style="color:#999;">Jiale Fu</a>
+            </p>
+            <!-- You can add a cute image here similar to jialefu's cat -->
+            <!-- <img src="your-cute-image.png" alt="mascot"> -->
+        </footer>
+    </div>
+
+    <script>
+        // Auto-load GitHub avatar
+        document.addEventListener('DOMContentLoaded', function() {
+            const avatar = document.getElementById('avatar');
+            avatar.src = 'https://github.com/prefersung.png';
+            avatar.onerror = function() {
+                this.src = 'https://avatars.githubusercontent.com/u/0?v=4';
+            };
+        });
+    </script>
+</body>
+</html>

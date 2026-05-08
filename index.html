@@ -192,6 +192,14 @@
             font-style: normal;
         }
 
+        .pub-item .badge-review {
+            background: #e67e22;
+        }
+
+        .pub-item .badge-accepted {
+            background: #27ae60;
+        }
+
         /* News */
         .news-item {
             padding: 8px 0;
@@ -283,39 +291,59 @@
         <!-- Header / Profile -->
         <header class="header">
             <div class="profile">
-                <img src="https://avatars.githubusercontent.com/u/placeholder" alt="Pengfei Song" class="avatar" id="avatar">
+                <img src="https://github.com/prefersung.png" alt="Pengfei Song" class="avatar" id="avatar">
                 <div class="profile-info">
                     <h1>Pengfei Song <span style="font-weight:400;font-size:1.2rem;color:#666;">宋鹏飞</span></h1>
-                    <div class="location">📍 Suzhou, China | Southeast University</div>
+                    <div class="location">📍 Nanjing, China | 南京</div>
                     <p>
-                        I am a Master's student at <strong>Southeast University</strong>, focusing on <strong>Recommender Systems</strong> 
-                        and <strong>Generative AI</strong>. My research interests include cross-domain recommendation, cold-start problem modeling, 
-                        and generative recommendation systems (e.g., VAE/RQVAE-based approaches).
+                        I am a Master's student at <strong>Southeast University</strong>, majoring in Intelligent Science and Technology. 
+                        My research focuses on <strong>computer vision</strong>, <strong>multimodal learning</strong>, and <strong>large language models</strong>, 
+                        particularly on test-time adaptation, semantic segmentation, and vision-language models.
                     </p>
                     <p>
-                        Currently, I am a research intern at <strong>Microsoft Suzhou</strong> (via FESCO Adecco), working on large-scale 
-                        recommendation systems and exploring the intersection of LLMs and recommendation.
+                        I have interned at <strong>Microsoft</strong> (AI Agent & LLM) and <strong>Huawei</strong> (AI Infra & Multimodal LLM Training), 
+                        gaining hands-on experience in model training, deployment, and AI coding workflows.
                     </p>
                     <div class="links">
-                        <a href="mailto:prefersung@gmail.com">📧 Email</a>
+                        <a href="mailto:songpf@seu.edu.cn">📧 Email</a>
                         <a href="https://github.com/prefersung" target="_blank">💻 GitHub</a>
-                        <a href="https://scholar.google.com/citations?user=placeholder" target="_blank">🎓 Google Scholar</a>
-                        <a href="https://www.linkedin.com/in/pengfei-song-placeholder" target="_blank">🔗 LinkedIn</a>
+                        <a href="https://scholar.google.com/citations?user=9AutN7MAAAAJ&hl=zh-CN" target="_blank">🎓 Google Scholar</a>
+                        <a href="https://prefersung.github.io/" target="_blank">🏠 Homepage</a>
                     </div>
                 </div>
             </div>
         </header>
 
+        <!-- Education -->
+        <section id="education">
+            <h2>Education</h2>
+
+            <div class="exp-item">
+                <strong>Southeast University</strong> — M.S. in Intelligent Science and Technology <span class="time">| Sept 2024 – Jun 2027 (Expected)</span><br>
+                School of Computer Science and Engineering. GPA: 87/100 (Top 8%)
+            </div>
+
+            <div class="exp-item">
+                <strong>Southeast University</strong> — B.S. in Applied Mathematics <span class="time">| Sept 2020 – Jun 2024</span><br>
+                School of Mathematics. GPA: 88/100 (Top 15%)
+            </div>
+
+            <div class="exp-item">
+                <strong>UC Berkeley</strong> — Extension Program <span class="time">| Aug 2022 – Dec 2022</span><br>
+                Fully funded by CSC (China Scholarship Council) national public dispatch scholarship (Top 5%)
+            </div>
+        </section>
+
         <!-- Research Interests -->
         <section id="research">
             <h2>Research Interests</h2>
-            <p>My research focuses on improving recommender systems through generative modeling and cross-domain transfer:</p>
+            <p>My research interests focus on efficient and robust visual understanding, particularly:</p>
             <ul>
-                <li><strong>Cross-Domain Recommendation</strong> — Transferring knowledge across domains to alleviate data sparsity</li>
-                <li><strong>Cold-Start Problem</strong> — Addressing the challenge of recommending for new users/items with limited interactions</li>
-                <li><strong>Generative Recommendation</strong> — Leveraging VAE, RQVAE, and seq2seq models for next-item prediction</li>
-                <li><strong>Knowledge Distillation</strong> — Cross-domain knowledge distillation for domain adaptation in recommendation</li>
-                <li><strong>Efficient LLM Deployment</strong> — Practical deployment of large models in real-world recommendation scenarios</li>
+                <li><strong>Test-Time Adaptation (TTA)</strong> — Training-free adaptation of vision-language models with semantic prior knowledge</li>
+                <li><strong>Weakly Supervised Semantic Segmentation (WSSS)</strong> — Leveraging diffusion models to enhance CLIP dense representations</li>
+                <li><strong>Multimodal Learning</strong> — Cross-modal semantic enhancement and vision-language model alignment</li>
+                <li><strong>LLM Agent Systems</strong> — Multi-step task planning, tool integration, and intelligent workflow automation</li>
+                <li><strong>Model Compression & Inference Optimization</strong> — RQ-VAE quantization, BF16 mixed precision, distillation, vLLM deployment</li>
             </ul>
         </section>
 
@@ -324,73 +352,72 @@
             <h2>Experience</h2>
 
             <div class="exp-item">
-                <strong>Microsoft Suzhou</strong> — Research Intern <span class="time">| 2025 – Present</span><br>
-                Working on large-scale recommendation systems and LLM-related projects. Mentored by Qingsong and collaborating with the ICM data team.
+                <strong>Huawei</strong> — AI Infra / Multimodal LLM Training Intern <span class="time">| Nov 2025 – Apr 2026</span><br>
+                Worked on 13B multimodal LLM adaptation for terminal-side AI assistants and domain-specific Q&A. 
+                Built end-to-end SFT pipelines with PyTorch, Transformers, and LoRA/QLoRA; performed inference validation on Ascend NPU. 
+                Participated in model compression (RQ-VAE quantization, BF16, distillation) and vLLM deployment with OpenAI Triton custom kernel development.
             </div>
 
             <div class="exp-item">
-                <strong>Southeast University</strong> — Master's Student <span class="time">| 2023 – Present</span><br>
-                School of Computer Science and Engineering. Research on cross-domain recommendation and generative models. Served as class monitor and deputy secretary of the Youth League branch.
-            </div>
-
-            <div class="exp-item">
-                <strong>Tongren Hospital Nanjing</strong> — Volunteer <span class="time">| Previous</span><br>
-                Participated in hospital guidance volunteer service.
-            </div>
-        </section>
-
-        <!-- News -->
-        <section id="news">
-            <h2>News</h2>
-            <div class="news-item">
-                <span class="date">[May 2025]</span> Joined Microsoft Suzhou as a research intern, working on recommendation systems.
-            </div>
-            <div class="news-item">
-                <span class="date">[Apr 2025]</span> Completed onboarding and obtained GitHub EMU account and Claude Code access.
-            </div>
-            <div class="news-item">
-                <span class="date">[Mar 2025]</span> Started investigating AMLCDR (WSDM 2025) and RPG (KDD 2025) for cross-domain recommendation research.
-            </div>
-            <div class="news-item">
-                <span class="date">[Feb 2025]</span> Working on SID generation project involving RQVAE for video generation and codebook initialization analysis.
+                <strong>Microsoft</strong> — AI Large Model Intern <span class="time">| Sept 2025 – Nov 2025</span><br>
+                Designed and deployed an intelligent agent for automated ticket processing based on real MS Teams enterprise workflow data, 
+                leveraging NVIDIA H100. Completed multi-step task orchestration, tool integration, state management, and Azure deployment. 
+                Proficient in Claude Code, GitHub Copilot, and AI coding-assisted development workflows.
             </div>
         </section>
 
         <!-- Publications -->
         <section id="publications">
-            <h2>Selected Publications</h2>
+            <h2>Publications</h2>
 
             <div class="pub-item">
-                <div class="title">AMLCDR: Adaptive Meta-Learning for Cross-Domain Recommendation <span class="badge">WSDM 2025</span></div>
+                <div class="title">ASC for Training-Free Adaptation of VLMs <span class="badge badge-review">Under Review</span></div>
                 <div class="authors"><em>Pengfei Song</em>, et al.</div>
-                <div class="venue">In Proceedings of the 18th ACM International WSDM Conference, 2025</div>
+                <div class="venue">CCF-A Conference, 2025</div>
             </div>
 
             <div class="pub-item">
-                <div class="title">RPG: Reinforced Prompt Generation for Cold-Start Recommendation <span class="badge">KDD 2025</span></div>
-                <div class="authors">Authors, <em>Pengfei Song</em>, et al.</div>
-                <div class="venue">In Proceedings of the 31st ACM SIGKDD Conference, 2025</div>
-            </div>
-
-            <div class="pub-item">
-                <div class="title">Cross-Domain Sequential Recommendation via Disentangled Representation Learning</div>
+                <div class="title">Diffusion Enhances CLIP Dense Knowledge for WSSS <span class="badge badge-review">In Progress</span></div>
                 <div class="authors"><em>Pengfei Song</em>, et al.</div>
-                <div class="venue">Under Review</div>
+                <div class="venue">IEEE TIP, 2025</div>
             </div>
 
-            <p style="margin-top:15px;color:#666;font-size:0.9rem;">
-                * Publication list is illustrative — please replace with your actual papers.
-            </p>
+            <div class="pub-item">
+                <div class="title">Human Semantic Segmentation using Millimeter Wave Radar Point Clouds <span class="badge badge-accepted">Accepted</span></div>
+                <div class="authors"><em>Pengfei Song</em>, et al.</div>
+                <div class="venue">IEEE CSCWD, 2023</div>
+            </div>
         </section>
 
-        <!-- Projects -->
+        <!-- Research Projects -->
         <section id="projects">
-            <h2>Projects</h2>
+            <h2>Research Projects</h2>
+
+            <div class="exp-item">
+                <strong>Cross-Modal Semantic Enhanced Test-Time Adaptation Framework</strong> <span class="time">| Nov 2024 – Apr 2025</span><br>
+                Proposed <strong>CSE</strong>, innovatively combining semantic prior knowledge with caching mechanisms to achieve efficient test-time adaptation without backpropagation. 
+                Computational efficiency is improved by over 10× compared to existing training-based methods. Designed cross-modal semantic enhancement to compensate for visual feature limitations via dictionary semantic priors. 
+                Proposed top-k label exploration and outlier rejection strategies, achieving <strong>2.93% improvement</strong> over baseline on ImageNet and variants. 
+                Served as first author; one CCF-A paper under review.
+            </div>
+
+            <div class="exp-item">
+                <strong>Human Semantic Segmentation from mmWave Radar Sparse Point Clouds</strong> <span class="time">| Jun 2023 – Aug 2024</span><br>
+                Compared to cameras and LiDAR, mmWave radar offers privacy protection advantages. Built a semantic segmentation framework with spatio-temporal feature extraction modules for radar point clouds. 
+                Served as primary contributor; one first-author paper accepted at IEEE CSCWD 2023. 
+                Further proposed <strong>DiCLIP</strong>, a novel WSSS method combining diffusion models to enhance CLIP dense representations; one TIP paper accepted and in publication process.
+            </div>
+        </section>
+
+        <!-- Honors & Awards -->
+        <section id="awards">
+            <h2>Honors & Awards</h2>
             <ul>
-                <li><strong>SID Generation</strong> — RQVAE-based video generation with codebook initialization analysis and PyTorch distributed training (DDP)</li>
-                <li><strong>AL-GR Dataset Experiments</strong> — Fine-tuning T5-base for recommendation tasks with Hugging Face Accelerate</li>
-                <li><strong>Cross-Domain Recommendation Toolkit</strong> — PyTorch implementation of meta-learning and knowledge distillation baselines</li>
-                <li><strong>RISCV-Agent / SCV-Agent</strong> — RTL verification and coverage analysis (line, branch, condition, toggle)</li>
+                <li><strong>National Scholarship</strong> — 2025</li>
+                <li><strong>14th Huawei Cup Graduate Mathematical Modeling Competition</strong> — Second Prize (Top 5%), 2024</li>
+                <li><strong>Mathematical Contest in Modeling (MCM/ICM)</strong> — Meritorious Winner (First Prize), 2023</li>
+                <li><strong>CSC National Scholarship Council Scholarship</strong> — Top 5%, 2022</li>
+                <li><strong>Zhishan Excellence Scholarship</strong> — Top 10%, 2022 (Two consecutive terms)</li>
             </ul>
         </section>
 
@@ -398,11 +425,11 @@
         <section id="skills">
             <h2>Skills</h2>
             <ul>
-                <li><strong>Deep Learning:</strong> PyTorch, Transformers, Hugging Face, Accelerate, Distributed Training (DDP)</li>
-                <li><strong>Programming:</strong> Python, C/C++, LaTeX, Shell scripting</li>
-                <li><strong>Systems:</strong> Linux server administration, SSH, iptables/ufw, conda environment management</li>
-                <li><strong>Data:</strong> pandas, CSV/JSONL processing, Hugging Face Datasets</li>
-                <li><strong>Tools:</strong> Git, nohup, YAML/JSON configuration management, Claude Code</li>
+                <li><strong>Deep Learning:</strong> PyTorch, Transformers, Hugging Face, LoRA/QLoRA, Distributed Training</li>
+                <li><strong>LLM & Agent:</strong> Claude Code, GitHub Copilot, vLLM, RQ-VAE, Model Distillation</li>
+                <li><strong>Hardware:</strong> NVIDIA H100, Ascend NPU, OpenAI Triton kernel development</li>
+                <li><strong>Programming:</strong> Python, C/C++, Shell, Git, Azure Deployment</li>
+                <li><strong>Language:</strong> CET-4 (603), CET-6 (616), IELTS 6.5</li>
             </ul>
         </section>
 
@@ -410,19 +437,23 @@
         <footer class="footer">
             <p>© 2025 Pengfei Song. All rights reserved.</p>
             <p>Last updated: May 2025</p>
-            <p style="margin-top:10px;font-size:0.8rem;">
-                Powered by GitHub Pages | Theme inspired by <a href="https://jialefu.github.io/" style="color:#999;">Jiale Fu</a>
+            <p style="margin-top:10px;">
+                <span id="busuanzi_container_site_pv">👁 Total Views: <span id="busuanzi_value_site_pv"></span></span> | 
+                <span id="busuanzi_container_site_uv">👤 Visitors: <span id="busuanzi_value_site_uv"></span></span>
             </p>
-            <!-- You can add a cute image here similar to jialefu's cat -->
-            <!-- <img src="your-cute-image.png" alt="mascot"> -->
+            <p style="margin-top:10px;font-size:0.8rem;">
+                Powered by GitHub Pages
+            </p>
         </footer>
     </div>
 
+    <!-- Busuanzi Visitor Statistics -->
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
     <script>
-        // Auto-load GitHub avatar
+        // Auto-load GitHub avatar with fallback
         document.addEventListener('DOMContentLoaded', function() {
             const avatar = document.getElementById('avatar');
-            avatar.src = 'https://github.com/prefersung.png';
             avatar.onerror = function() {
                 this.src = 'https://avatars.githubusercontent.com/u/0?v=4';
             };
